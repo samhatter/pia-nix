@@ -51,7 +51,7 @@ in
 
         ExecStart = "${pkgs.bash}/bin/bash  ./run_setup.sh";
         
-        WorkingDirectory = "${config.system.build.filesPath}"; 
+        WorkingDirectory = "./"; 
       };
    
       environment = {
