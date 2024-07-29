@@ -6,7 +6,7 @@ let
   UID = 243;
   GID = 243;
   cfg = config.services.pia;
-  moduleDir = builtins.getAttr "outPath" (builtins.toFile ".");
+  currentDir = builtins.toString ./.
 in
 {
   options.services.pia = {
@@ -52,7 +52,7 @@ in
 
         ExecStart = "${pkgs.bash}/bin/bash  ./run_setup.sh";
         
-        WorkingDirectory = "${moduleDir}"; 
+        WorkingDirectory = {$currentDir}; 
       };
    
       environment = {
