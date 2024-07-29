@@ -52,7 +52,7 @@ in
 
         ExecStart = "${pkgs.bash}/bin/bash  ./run_setup.sh";
         
-        WorkingDirectory = "{$currentDir}"; 
+        WorkingDirectory = "${currentDir}"; 
       };
    
       environment = {
