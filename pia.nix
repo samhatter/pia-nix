@@ -6,7 +6,7 @@ let
   UID = 243;
   GID = 243;
   cfg = config.services.pia;
-  currentDir = builtins.getEnv "PWD";
+  currentDir = builtins.toString ./.;
 in
 {
   options.services.pia = {
